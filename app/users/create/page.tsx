@@ -4,6 +4,7 @@ import UserForm from "../../../components/UserForm";
 import api from "../../../lib/api";
 import { useRouter } from "next/navigation";
 import { UserFormValues } from "../../../types/user";
+import AddNewNav from "@/components/AddNewNav";
 
 export default function CreateUserPage() {
   const router = useRouter();
@@ -20,8 +21,7 @@ export default function CreateUserPage() {
 
   return (
     <div className="max-w-7xl mx-auto ">
-      
-      <NavBar />
+      <AddNewNav/>
       <UserForm onSubmit={handleCreate} submitLabel="Create User" />
     </div>
   );
