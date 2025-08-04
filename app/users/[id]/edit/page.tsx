@@ -37,3 +37,46 @@ export default function EditUserPage() {
     </div>
   );
 }
+
+
+
+
+
+// 'use client';
+// import { useState } from "react";
+// import NavBar from "../../../../components/NavBar";
+// import UserForm from "../../../../components/UserForm";
+// import { useRouter, useParams } from "next/navigation";
+// import { User, UserFormValues } from "../../../../types/user";
+// import EditNav from "@/components/EditNav";
+
+// const DUMMY_USER: User = {
+//   id: "1",
+//   firstName: "Jane",
+//   lastName: "Doe",
+//   username: "janedoe",
+//   email: "jane@example.com",
+//   roles: "USER",
+//   status: "ACTIVE"
+// };
+
+// export default function EditUserPage() {
+//   const router = useRouter();
+//   // const params = useParams(); // If you want ID awareness
+
+//   // No useEffect! Just hardcode the user.
+//   const [user] = useState<User>(DUMMY_USER);
+
+//   const handleUpdate = async (values: UserFormValues) => {
+//     alert(JSON.stringify(values, null, 2));
+//     // You can also navigate back or show a toast
+//     router.push('/users');
+//   };
+
+//   return (
+//     <div className="max-w-7xl mx-auto">
+//       <EditNav />
+//       <UserForm initialValues={user} onSubmit={handleUpdate} submitLabel="Update User" />
+//     </div>
+//   );
+// }

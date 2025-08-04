@@ -169,8 +169,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
         </button>
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold"
-        >
+          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold">
           {submitLabel}
         </button>
       </div>
