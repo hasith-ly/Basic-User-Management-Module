@@ -24,7 +24,7 @@ export default function UserListTable({ users }: Props) {
             <tr key={user.id} className="border-b last:border-none">
               <td className="py-2">{user.firstName}</td>
               <td className="py-2">{user.lastName}</td>
-              <td className="py-2">{user.username}</td>
+              <td className="py-2">{user.userName}</td>
               <td className="py-2">{user.email}</td>
               <td className="py-2">
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold ${user.status === 'ACTIVE' ? 'bg-gray-200 text-gray-900' : 'bg-gray-300 text-gray-600'}`}>
