@@ -16,7 +16,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
   const [form, setForm] = useState({
     firstName: initialValues.firstName || "",
     lastName: initialValues.lastName || "",
-    username: initialValues.username || "",
+    userName: initialValues.userName || "",
     email: initialValues.email || "",
     password: "",
     confirmPassword: "",
@@ -31,7 +31,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
     let e: { [k: string]: string } = {};
     if (!form.firstName || form.firstName.length < 2 || form.firstName.length > 30) e.firstName = "2-30 letters";
     if (!form.lastName || form.lastName.length < 2 || form.lastName.length > 30) e.lastName = "2-30 letters";
-    if (!form.username || form.username.length < 4 || form.username.length > 20) e.username = "4-20 chars";
+    if (!form.userName || form.userName.length < 4 || form.userName.length > 20) e.userName = "4-20 chars";
     if (!form.email || !/^\S+@\S+\.\S+$/.test(form.email)) e.email = "valid email required";
     if (!form.password || form.password.length < 8) e.password = "Min 8 chars";
     if (!/[A-Z]/.test(form.password)) e.password = "Must have uppercase";
@@ -43,7 +43,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
     setForm({
       firstName: "",
       lastName: "",
-      username: "",
+      userName: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -60,7 +60,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
       onSubmit({
         firstName: form.firstName,
         lastName: form.lastName,
-        username: form.username,
+        userName: form.userName,
         password: form.password,
         email: form.email,
         roles,
@@ -87,7 +87,7 @@ export default function UserForm({ initialValues = {}, onSubmit, submitLabel }: 
           <label className="font-semibold mb-1 mt-4 block">
             Username <span className="text-red-500">*</span>
           </label>
-          <input name="username" className="input" value={form.username} onChange={handleChange} />
+          <input name="userName" className="input" value={form.userName} onChange={handleChange} />
           {errors.username && <span className="text-red-500 text-sm">{errors.username}</span>}
 
           {/* Password */}

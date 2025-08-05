@@ -5,7 +5,7 @@ export interface User {
   id: string;
   firstName: string;
   lastName: string;
-  username: string;
+  userName: string;
   email: string;
   password?: string;
   roles: UserRole;
@@ -15,7 +15,7 @@ export interface User {
 export interface UserFormValues {
   firstName: string;
   lastName: string;
-  username: string;
+  userName: string;
   email: string;
   password: string;
   roles: UserRole;
